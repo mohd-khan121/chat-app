@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Chat App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <div>
+          <p class="app__eyebrow">Simple Chat App</p>
+          <h1>Team Lounge</h1>
+        </div>
+        <button class="app__btn" type="button" id="clearBtn">Clear Chat</button>
+      </header>
+
+      <section class="chat" aria-live="polite" aria-label="Chat messages">
+        <div class="chat__messages" id="messages"></div>
+      </section>
+
+      <form class="composer" id="composer">
+        <label class="composer__label" for="messageInput">Message</label>
+        <div class="composer__controls">
+          <input
+            id="messageInput"
+            class="composer__input"
+            type="text"
+            name="message"
+            placeholder="Send a message to the room"
+            autocomplete="off"
+            required
+          />
+          <button class="composer__send" type="submit">Send</button>
+        </div>
+        <p class="composer__hint">Press Enter to send. Responses are simulated.</p>
+      </form>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
